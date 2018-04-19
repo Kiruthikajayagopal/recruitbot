@@ -1,0 +1,132 @@
+<div class="logo">
+
+    <img src="/logo" />
+
+</div>
+<div style="text-align:center">
+
+
+    <style>
+        body {
+            background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+            height: 100vh;
+            margin: 0;
+            margin-top: 2em;
+            padding: 0;
+
+        }
+
+        .logo img {
+            float: left;
+            width: 300px;
+            height: 100px;
+            margin-left: 2em;
+        }
+
+        .text {
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 4em;
+            margin-left: 0em;
+            color: gray;
+            text-align: center;
+            font-family: "Comic Sans MS", "Comic Sans";
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+
+        table {
+
+            border-collapse: collapse;
+            width: 70%;
+            height: 20%;
+        }
+
+        th {
+            background-color: darkgray;
+            color: white;
+        }
+
+        td,
+        th {
+
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            font-family: "Comic Sans MS", "Comic Sans";
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+        }
+
+        .button {
+            background-image: url(../images/arrow.png);
+            background-repeat: no-repeat;
+            background-position: 300px;
+            width: 200px;
+            padding: 12px;
+            margin-top: 8px;
+            font-family: "Comic Sans MS", "Comic Sans";
+            cursor: pointer;
+            line-height: 1;
+            border-radius: 5px;
+            font-size: 20px;
+            -webkit-appearance: none;
+            box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.4);
+            outline: none
+        }
+
+        .button:hover {
+            background-color: #36b051;
+            color: #fff;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5
+        }
+    </style>
+
+    <script>
+        function testFunc() {
+            window.location.href = "startTest";
+        }
+    </script>
+
+    </head>
+
+    <body>
+        <h1 class="text">
+            WELCOME TO THE ONLINE TEST
+            <br> Good Luck
+
+        </h1>
+        <br>
+        </br>
+        <table border='0' width='700px' cellpadding='0' cellspacing='0' align='center' style="margin-top:6em">
+
+            <tr>
+                <th> SI.No </th>
+                <th> Test type </th>
+                <th> Number of questions </th>
+                <th> Marks </th>
+                <th> Duration </th>
+                <th></th>
+            </tr>
+
+            <tr>
+                <td> 1 </td>
+                <td> Multiple choice questions </td>
+                <td> 30 </td>
+                <td> 30 </td>
+                <td> 30mints </td>
+                <td>
+                    <input type="button" onclick="testFunc()" class="button" value="Start"> </td>
+            </tr>
+        </table>
+
+
+    </body>
+</div>
+</div>

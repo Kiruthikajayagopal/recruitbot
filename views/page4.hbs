@@ -1,0 +1,161 @@
+<div class="logo">
+    <img src="/logo" />
+</div>
+<h1>
+
+</h1>
+
+
+<style>
+    body {
+        background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .logo img {
+        float: left;
+        width: 300px;
+        height: 100px;
+        margin-top: 1em;
+        margin-left: 2em;
+    }
+
+    .header {
+        font-size: 18px;
+        font-weight: bold;
+        color: grey;
+        font-family: "Comic Sans MS", "Comic Sans";
+        letter-spacing: 1px;
+        display: inline-block;
+
+    }
+
+    .item {
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+        font-family: "Comic Sans MS", "Comic Sans";
+        letter-spacing: 1px;
+        display: inline-block;
+    }
+
+    .timer {
+        font-size: 40px;
+        font-weight: 500;
+        color: black;
+        margin-top: 3em;
+        margin-left: 28em;
+        font-family: "Comic Sans MS", "Comic Sans";
+        letter-spacing: 1px;
+        display: inline-block;
+    }
+
+    .submit {
+        background-image: url(../images/arrow.png);
+        background-repeat: no-repeat;
+        background-position: 300px;
+        width: 200px;
+        padding: 12px;
+        margin-top: 8px;
+        font-family: "Comic Sans MS", "Comic Sans";
+        cursor: pointer;
+        line-height: 1;
+        border-radius: 5px;
+        font-size: 20px;
+        -webkit-appearance: none;
+        box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.4);
+        outline: none
+    }
+
+    .submit:hover {
+        background-color: #36b051;
+        color: #fff;
+    }
+</style>
+
+<script>
+    function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+        setInterval(function () {
+            minutes = parseInt(timer / 60, 10)
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                document.myForm.submit();
+            }
+
+        }, 1000);
+
+    }
+
+    window.onload = function () {
+        var oneMinute = 60 * 1,
+            display = document.querySelector('#time');
+        startTimer(oneMinute, display);
+    };
+
+    function showAlert(error) {
+        if (error.responseText == 'showAlert')
+            alert("Please enter correct user name and password.")
+    }
+
+    function quitFunc() {
+        window.location.href = '/submit';
+    };
+</script>
+
+<body>
+    <div>
+        <h1 class="timer">
+            <span id="time">01:00</span> Minutes!
+        </h1>
+    </div>
+
+    <div class="container" style="margin-top:80px">
+        <div class="well" style="background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);">
+
+            <form name="myForm" id="myForm" method='post' action='/submit'>
+                <div>
+                    <section>
+                        <article class="item">
+                            <div>
+                                <b>{{item.num}}</b>. {{ item.question }}?
+                                <br></br>
+                                <br></br>
+                            </div>
+                            <div class="well" style="background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);">
+                                <div>
+                                    <input type="radio" class="header" name="option" value="1 " required> {{ item.option1 }}
+                                    <br></br>
+                                </div>
+                                <div>
+                                    <input type="radio" class="header" name="option" value="2 " required> {{ item.option2 }}
+                                    <br></br>
+                                </div>
+                                <div>
+                                    <input type="radio" class="header" name="option" value="3 " required> {{ item.option3 }}
+                                    <br></br>
+                                </div>
+                                <div>
+                                    <input type="radio" class="header" name="option" value="4" required> {{ item.option4 }}
+                                    <br></br>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+                <div style="text-align:center">
+                    <button type="submit" class="submit">Next Question</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,68 @@
+<div class="container" style="text-align:center">
+  <a href="/deleteName">Delete all registered people from database.</a>
+  <h2 style="color:green">People registered</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>
+          <b>E-mail ID</b>
+        </th>
+        <th>
+          <b>Password</b>
+        </th>
+        <th>
+          <b>Marks</b>
+        </th>
+        <th>
+          <b>Status</b>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{# each items}}
+      <tr>
+        <td>{{this.emailid}}</td>
+        <td>{{this.id}}</td>
+        <td>{{this.score}}</td>
+        <td>{{this.result}}</td>
+      </tr>
+      {{/each}}
+      <tr>
+    </tbody>
+  </table>
+</div>
+
+<table border='0' cellpadding='0' cellspacing='0' width='700px' align='center'>
+  <tr>
+    <td align='center'>
+      <input type="button" onclick="history.back(-1)" class="back" name='back' value="BACK">
+      <br>
+      </br>
+      <br>
+      </br>
+    </td>
+  </tr>
+</table>
+<style>
+  .back {
+    background-image: url(../images/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 300px;
+    width: 200px;
+    padding: 12px;
+    margin-top: 8px;
+    font-family: "Comic Sans MS", "Comic Sans";
+    cursor: pointer;
+    line-height: 1;
+    border-radius: 5px;
+    font-size: 20px;
+    -webkit-appearance: none;
+    box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.4);
+    outline: none
+  }
+
+  .back:hover {
+    background-color: #36b051;
+    color: #fff;
+  }
+</style>
