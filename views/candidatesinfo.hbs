@@ -1,0 +1,502 @@
+<style>
+    body {
+        background-color: whitesmoke;
+        margin: 0;
+        padding: 0;
+        height: auto;
+    }
+
+    .header img {
+        float: left;
+        width: 300px;
+        height: 100px;
+    }
+
+    .header h1 {
+        position: relative;
+        top: 18px;
+        left: 10px;
+        background-image: url(../images/arrow.png);
+        background-repeat: no-repeat;
+        background-position: 300px;
+        font-size: 24px;
+        font-weight: bold;
+        color: red;
+        margin-right: 10px;
+        text-align: center;
+        font-family: "Comic Sans MS", "Comic Sans";
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .signup-w3ls {
+        margin-bottom: 0px!important;
+        width: 50%;
+        margin: 30px 25% 80%;
+        padding: 0;
+        display: table;
+        position: relative;
+    }
+
+    .signup-agile1 {
+        width: 100%;
+        float: center;
+    }
+
+    .signup-w3ls .signup-agile1 .form-control {
+        margin-bottom: 20px;
+    }
+
+    label.header {
+
+
+        font-size: 18px;
+        font-weight: 500;
+        width: 215px;
+        color: black;
+        margin-right: 10px;
+        text-align: justify;
+        font-family: "Comic Sans MS", "Comic Sans";
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        display: inline-block;
+
+    }
+
+    input#regno,
+    input#email,
+    input#phno,
+    input#collname,
+    input#qualification,
+    input#streetname,
+    input#town,
+    input#zipcode,
+    input#skills,
+    input#projects {
+        background-image: url(../images/arrow.png);
+        background-repeat: no-repeat;
+        background-position: 300px;
+        width: 353px;
+        padding: 12px;
+        margin-top: 8px;
+        font-family: "Comic Sans MS", "Comic Sans";
+        line-height: 1;
+        border-radius: 5px;
+        font-size: 20px;
+        text-align: justify;
+        -webkit-appearance: none;
+        box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.4);
+        outline: none
+    }
+
+    input#first_name,
+    input#middle_name,
+    input#last_name,
+    input#district,
+    input#state {
+        background-image: url(../images/arrow.png);
+        background-repeat: no-repeat;
+        background-position: 300px;
+        width: 200px;
+        padding: 12px;
+        margin-top: 8px;
+        font-family: "Comic Sans MS", "Comic Sans";
+        line-height: 1;
+        border-radius: 5px;
+        font-size: 20px;
+        -webkit-appearance: none;
+        box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.4);
+        outline: none
+    }
+
+    select {
+        background-image: url(../images/arrow.png);
+        background-repeat: no-repeat;
+        background-position: 300px;
+        width: 353px;
+        padding: 12px;
+        margin-top: 8px;
+        font-family: "Comic Sans MS", "Comic Sans";
+        line-height: 1;
+        border-radius: 5px;
+        font-size: 20px;
+        -webkit-appearance: none;
+        box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.4);
+        outline: none
+    }
+
+    select:hover {
+        color: rgb(9, 206, 9);
+        cursor: pointer;
+    }
+
+    input[type=file] {
+        width: 1px;
+        visibility: inherit;
+    }
+
+    .submit {
+        background-image: url(../images/arrow.png);
+        background-repeat: no-repeat;
+        background-position: 300px;
+        width: 200px;
+        padding: 12px;
+        margin-top: 8px;
+        font-family: "Comic Sans MS", "Comic Sans";
+        cursor: pointer;
+        line-height: 1;
+        border-radius: 5px;
+        font-size: 20px;
+        -webkit-appearance: none;
+        box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.4);
+        outline: none
+    }
+
+    .submit:hover {
+        background-color: #36b051;
+        color: #fff;
+    }
+
+    .description {
+        outline: none;
+        border: none;
+        margin: 0px;
+        padding: 0px;
+        font-family: Courier, monospace;
+    }
+
+
+    #paper {
+        color: #FFF;
+        font-size: 20px;
+    }
+
+    #margin {
+        margin-left: 12px;
+        margin-bottom: 20px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+
+    #project_description {
+        width: 500px;
+        overflow: hidden;
+        background-color: #FFF;
+        color: #222;
+        font-family: Courier, monospace;
+        font-weight: normal;
+        font-size: 24px;
+        resize: none;
+        line-height: 40px;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 45px;
+        padding-bottom: 34px;
+        background-image: url(https://static.tumblr.com/maopbtg/E9Bmgtoht/lines.png), url(https://static.tumblr.com/maopbtg/nBUmgtogx/paper.png);
+        background-repeat: repeat-y, repeat;
+        -webkit-border-radius: 12px;
+        border-radius: 12px;
+        -webkit-box-shadow: 0px 2px 14px #000;
+        box-shadow: 0px 2px 14px #000;
+        border-top: 1px solid #FFF;
+        border-bottom: 1px solid #FFF;
+    }
+
+    #wrapper {
+        width: 700px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 24px;
+        margin-bottom: 100px;
+    }
+</style>
+
+<script>
+
+    $(document).ready(function () {
+        $('#title').focus();
+        $('#text').autosize();
+    });
+
+</script>
+
+<body>
+
+    <div class="header">
+        <div class="logo">
+
+            <img src="/logo" />
+
+        </div>
+        <h1>
+            CANDIDATE INFORMATION
+        </h1>
+    </div>
+
+    </br>
+    </br>
+    </br>
+    </br>
+
+    <form action="/userprofile" method="post">
+
+        <div class="signup-w3ls">
+            <div class="signup-agile1">
+
+
+                <table border='0' width='700px' cellpadding='0' cellspacing='0' align='center'>
+
+                    <label class="header">Full Name</label>
+                    <tr>
+                        <td>
+                            <input type="text" id="first_name" name="first_name" placeholder="First Name" title="Please enter your First Name" required="">
+                            <input type="text" id="middle_name" name="middle_name" placeholder="Middle Name" title="Please enter your Middle Name">
+                            <input type="text" id="last_name" name="last_name" placeholder="Last Name" title="Please enter your Last Name" required="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+            </div>
+            </table>
+
+            <table border='0' width='700px' cellpadding='0' cellspacing='0' align='center'>
+
+                <label class="header">Current Address</label>
+                <tr>
+                    <td>
+                        <input type="text" id="streetname" name="streetname" placeholder="Street Name" title="Please enter your Street Name" required="">
+                        <br>
+                        <input type="text" id="town" name="town" placeholder="Town" title="Please enter your Town" required="">
+                        <br>
+                        <input type="text" id="district" name="district" placeholder="District" title="Please enter your District" required="">
+                        <input type="text" id="state" name="state" placeholder="State / Province" title="Please enter your State" required="">
+                        <br>
+                        <input type="number" id="zipcode" name="zipcode" placeholder="Postal / Zip Code" title="Please enter your Postal / Zip code"
+                            required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+        </div>
+        </table>
+        <table border='0' width='700px' cellpadding='0' cellspacing='0' align='center'>
+
+            <label class="header"> E-mail</label>
+            <tr>
+                <td>
+                    <input type="text" id="email" name="email" placeholder="E-mail ID" title="Please enter a valid E-mail ID" required="">
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            </div>
+        </table>
+        <table border='0' width='700px' cellpadding='0' cellspacing='0' align='center'>
+
+            <label class="header">Phone Number</label>
+            <tr>
+                <td>
+                    <input type="number" id="phno" name="phno" placeholder="Phone Number" title="Please enter a valid phone number" required="">
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            </div>
+        </table>
+
+        <table border='0' width='700px' cellpadding='0' cellspacing='0' align='center'>
+
+            <label class="header">College Name</label>
+            <tr>
+                <td>
+                    <input type="text" id="collname" name="collname" placeholder="College Name" title="Please enter your College Name" required="">
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            </div>
+        </table>
+
+        <table border='0' width='700px' cellpadding='0' cellspacing='0' align='center'>
+
+
+            <label class="header">QUALIFICATION</label>
+            <tr>
+                <td>
+                    <select id="qualification" name="qualification" required="">
+                        <option value=""> - select qualification--></option>
+                        <option value="B.E (CS)"> B.E (CS) </option>
+                        <option value="B.E (EC)"> B.E (EC) </option>
+                        <option value="BSC (CS)"> BSC (CS) </option>
+                        <option value="BCA"> BCA </option>
+                        <option value="MCA"> MCA</option>
+                        <option value="ME (CS)">ME (CS) </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        <table border='0' width='700px' cellpadding='0' cellspacing='0' align='center'>
+
+            <label class="header">Year of Passedout</label>
+            <tr>
+                <td>
+                    <select id="passout" onchange="display3()" name="passout" required>
+                        <option value="">
+                            <- select passout year -->
+                        </option>
+                        <option value="2018"> 2018</option>
+                        <option value="2017"> 2017</option>
+                        <option value="2016"> 2016</option>
+                        <option value="2015"> 2015</option>
+                        <option value="2014">2014</option>
+                        <option value="2013">2013</option>
+                        <option value="2012">2012</option>
+                        <option value="2011">2011</option>
+                        <option value="2010">2010</option>
+                        <option value="2009">2009</option>
+                        <option value="2008">2008</option>
+                        <option value="2007"> 2007</option>
+                        <option value="2006">2006</option>
+                        <option value="2005"> 2005</option>
+                        <option value="2004">2004</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        <table border='0' width='700px' cellpadding='0' cellspacing='0' align='center'>
+
+            <label class="header"> Programming Skills you know</label>
+            <br>
+            <tr>
+                <td>
+                    <label class="header">C</label>
+                    <select id="c" name="c" required="">
+                        <option value="">
+                            <- select skill level -->
+                        </option>
+                        <option value="Beginner"> Begginner </option>
+                        <option value="Intermediate"> Intermediate </option>
+                        <option value="Advanced"> Advanced </option>
+                    </select>
+                    <br>
+                    <label class="header">C++</label>
+                    <select id="cplus" name="cplus" required="">
+                        <option value="">
+                            <- select skill level -->
+                        </option>
+                        <option value="Beginner"> Begginner </option>
+                        <option value="Intermediate"> Intermediate </option>
+                        <option value="Advanced"> Advanced </option>
+                    </select>
+                    <br>
+                    <label class="header">HTML</label>
+                    <select id="html" name="html" required="">
+                        <option value="">
+                            <- select skill level -->
+                        </option>
+                        <option value="Beginner"> Begginner </option>
+                        <option value="Intermediate"> Intermediate </option>
+                        <option value="Advanced"> Advanced </option>
+                    </select>
+                    <br>
+                    <label class="header">CSS</label>
+                    <select id="css" name="css" required>
+                        <option value="">
+                            <- select skill level -->
+                        </option>
+                        <option value="Beginner"> Begginner </option>
+                        <option value="Intermediate"> Intermediate </option>
+                        <option value="Advanced"> Advanced </option>
+                    </select>
+                    <br>
+                    <label class="header">JAVASCRIPT</label>
+                    <select id="javascript" name="javascript" required="">
+                        <option value="">
+                            <- select skill level -->
+                        </option>
+                        <option value="Beginner"> Begginner </option>
+                        <option value="Intermediate"> Intermediate </option>
+                        <option value="Advanced"> Advanced </option>
+                    </select>
+                    <br>
+                    <label class="header">NODEJS</label>
+                    <select id="nodejs" name="nodejs" required="">
+                        <option value="">
+                            <- select skill level -->
+                        </option>
+                        <option value="Beginner"> Begginner </option>
+                        <option value="Intermediate"> Intermediate </option>
+                        <option value="Advanced"> Advanced </option>
+                    </select>
+                </td>
+            </tr>
+            </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            </div>
+        </table>
+
+        <table border='0' width='700px' cellpadding='0' cellspacing='0' align='center'>
+
+            <label class="header"> Projects </label>
+            <tr>
+                <td>
+                    <div id="wrapper">
+
+                        <form id="paper" method="get" action="">
+
+                            <div id="margin">
+
+                            </div>
+                            <textarea placeholder="Describe about your Project with title" id="project_description" name="project_description" class="description"
+                                required="" style="overflow:scroll; word-wrap: break-word; resize: none; width:600px; height: 300px; "></textarea>
+                            <br>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+            </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            </div>
+        </table>
+        <br>
+        </br>
+        <table border='0' cellpadding='0' cellspacing='0' width='700px' align='center'>
+            <tr>
+                <td align='center'>
+                    <input type="submit" class="submit" name='submit' value="SUBMIT">
+                    <br>
+                    </br>
+                    <br>
+                    </br>
+                </td>
+            </tr>
+        </table>
+    </form>
+    </div>
+    </div>
+    </div>
+
+</body>
+
+</html>

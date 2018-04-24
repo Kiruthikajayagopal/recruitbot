@@ -1,0 +1,331 @@
+<style>
+  .header img {
+    float: left;
+    width: 300px;
+    height: 100px;
+    margin-left: 2em;
+  }
+
+  body {
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+  }
+
+  .container {
+    width: 1300px;
+    margin-top: 2em;
+
+  }
+
+  .signup-w3ls {
+    margin-bottom: 0px!important;
+    width: 100%;
+    padding: 0;
+    display: table;
+    position: relative;
+  }
+
+  .signup-agile1 {
+    width: 100%;
+    float: center;
+  }
+
+
+  label.header {
+    font-size: 18px;
+    font-weight: 500;
+    width: 215px;
+    color: grey;
+    margin-right: 10px;
+    text-align: justify;
+    font-family: "Comic Sans MS", "Comic Sans";
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+
+  }
+
+  .design {
+
+
+    font-size: 18px;
+    font-weight: 600;
+    width: 215px;
+    color: rgb(245, 3, 3);
+    margin-right: 10px;
+    text-align: justify;
+    font-family: "Comic Sans MS", "Comic Sans";
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+
+  }
+
+  .submit {
+    background-image: url(../images/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 300px;
+    width: 200px;
+    padding: 12px;
+    margin-top: 8px;
+    font-family: "Comic Sans MS", "Comic Sans";
+    cursor: pointer;
+    line-height: 1;
+    border-radius: 5px;
+    font-size: 20px;
+    -webkit-appearance: none;
+    box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.4);
+    outline: none
+  }
+
+  .submit:hover {
+    background-color: #36b051;
+    color: #fff;
+  }
+
+  input#emailid,
+  input#pass1,
+  input#id,
+  input#username,
+  input#password {
+    background-image: url(../images/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 300px;
+    width: 353px;
+    padding: 12px;
+    margin-top: 8px;
+    font-family: "Comic Sans MS", "Comic Sans";
+    line-height: 1;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: justify;
+    -webkit-appearance: none;
+    box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.4);
+    outline: none
+  }
+</style>
+
+<script>
+  function showAlert(error) {
+    if (error.responseText == 'showAlert')
+      alert("Please enter correct user name and password.")
+  }
+
+  function checkPass() {
+    //Store the password field objects into variables ...
+    var pass1 = document.getElementById('pass1');
+    var id = document.getElementById('id');
+    //Store the Confimation Message Object ...
+    var message = document.getElementById('confirmMessage');
+    //Set the colors we will be using ...
+    var goodColor = "white";
+    var badColor = "#ff6666";
+    //Compare the values in the password field 
+    //and the confirmation field
+    if (pass1.value == id.value) {
+      //The passwords match. 
+      //Set the color to the good color and inform
+      //the user that they have entered the correct password 
+      id.style.backgroundColor = goodColor;
+      message.style.color = goodColor;
+      message.innerHTML = "Passwords Match!"
+    } else {
+      //The passwords do not match.
+      //Set the color to the bad color and
+      //notify the user.
+      id.style.backgroundColor = badColor;
+      message.style.color = badColor;
+      message.innerHTML = "Passwords Do Not Match!"
+    }
+  }
+
+</script>
+
+<body>
+  <div class="header">
+    <div class="logo">
+      <img src="/logo" />
+    </div>
+    <h1>
+
+    </h1>
+  </div>
+  <br>
+  </br>
+  <h2>
+    <div class="container">
+
+      <br>
+      </br>
+      <div class="signup-w3ls">
+        <div class="signup-agile1">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="well" style="background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);">
+                <div class="well" style="background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);">
+
+                  <h6>
+                    <center>
+                      <b class="design">REGISTER</b>
+                    </center>
+                  </h6>
+
+                </div>
+                <form action="/register" method="post">
+
+                  <table border='0' width='700px' cellpadding='0' cellspacing='0' align='center'>
+                    <label for="emailid" class="header">E-mail ID</label>
+                    <tr>
+                      <td>
+                        <input type="text" id="emailid" name="emailid" required="" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </table>
+
+                  <table border='0' width='700px' cellpadding='0' cellspacing='0' align='center'>
+                    <label for="pass1" class="header">Password:</label>
+                    <tr>
+                      <td>
+                        <input type="password" name="pass1" id="pass1">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </table>
+
+                  <table border='0' width='700px' cellpadding='0' cellspacing='0' align='center'></table>
+                  <label for="id" class="header">Confirm Password:</label>
+                  <tr>
+                    <td>
+                      <input type="password" name="id" id="id" onkeyup="checkPass(); return false;">
+                      <span id="confirmMessage" class="confirmMessage"></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                  </tr>
+                  </table>
+
+                  <br>
+                  <center>
+                    <button type="submit" class="submit">Register</button>
+                  </center>
+                  <hr>
+                </form>
+              </div>
+            </div>
+
+
+            <div class="col-sm-4">
+              <div class="well" style="background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);">
+                <div class="well" style="background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);">
+                  <h6>
+                    <center>
+                      <b class="design">
+                        Already Member?
+                        <hr> LOGIN
+                      </b>
+                    </center>
+                  </h6>
+                </div>
+                <form action="/login" method="post">
+                  <table border='0' width='700px' cellpadding='0' cellspacing='0' align='center'>
+                    <label for="emailid" class="header">E-mail ID</label>
+                    <tr>
+                      <td>
+                        <input type="text" id="emailid" name="emailid" required="" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </table>
+
+                  <table border='0' width='700px' cellpadding='0' cellspacing='0' align='center'>
+                    <label for="name" class="header">Password</label>
+                    <tr>
+                      <td>
+                        <input type="password" id="id" name="id" required="" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </table>
+
+                  <br>
+                  <center>
+                    <button type="submit" class="submit">Login</button>
+                  </center>
+                  <hr>
+                  <hr>
+                  <hr>
+                </form>
+                </section>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="well" style="background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);">
+                <div class="well" style="background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);">
+                  <h6>
+                    <center>
+                      <b class="design">
+                        Admin?
+
+                        <hr> LOGIN AS ADMIN</b>
+                    </center>
+                  </h6>
+                </div>
+                <form action="/adminLogin" method="post">
+                  <table border='0' width='700px' cellpadding='0' cellspacing='0' align='center'>
+                    <label for="name" class="header">Username</label>
+                    <tr>
+                      <td>
+                        <input type="text" id="username" name="username" required="" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </table>
+
+                  <table border='0' width='700px' cellpadding='0' cellspacing='0' align='center'>
+                    <label for="id" class="header">Password</label>
+                    <tr>
+                      <td>
+                        <input type="password" id="password" name="password" required="" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </table>
+
+                  <br>
+                  <center>
+                    <button type="submit" class="submit">Login as Admin</button>
+                  </center>
+                  <hr>
+                  <hr>
+                  <hr>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </form>
+
+      </div>
+    </div>
+    </div>
+  </h2>
+</body>
