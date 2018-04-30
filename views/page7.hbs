@@ -1,36 +1,59 @@
-<div style="text-align:left" class="container">
+<div style="text-align:center" class="container">
   <h3 style="color:green">Data you entered</h3>
-  <div>
-    <ul class="list-group">
-      <div>
-        {{# each items }}
-        <ul class="list-group">
-          <div class="well">
 
 
-            <li class="list-group-item">Question no.
-              <b>{{ this.num }}</b>
-            </li>
-            <li class="list-group-item">Question: {{ this.question }}</li>
-            <li class="list-group-item">1: {{ this.option1 }}</li>
-            <li class="list-group-item">2: {{ this.option2 }}</li>
-            <li class="list-group-item">3: {{ this.option3 }}</li>
-            <li class="list-group-item">4: {{ this.option4}} </li>
-<<<<<<< HEAD
-             <li class="list-group-item">category: {{this.category}} </li>
-            <li class="list-group-item">level: {{this.level }}</li>
-=======
->>>>>>> origin/master
-            <li class="list-group-item">Correct Answer: {{ this.optionCorrect }}</li>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>
+          <b>Number</b>
+        </th>
+        <th>
+          <b>Question</b>
+        </th>
+        <th>
+          <b>Option 1</b>
+        </th>
+        <th>
+          <b>Option 2</b>
+        </th>
+        <th>
+          <b>Option 3</b>
+        </th>
+        <th>
+          <b>Option 4</b>
+        </th>
+        <th>
+          <b>Correct Option</b>
+        </th>
+         <th>
+          <b>Category</b>
+        </th>
+         <th>
+          <b>Level</b>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{# each items }}
+      <tr>
 
-          </div>
-        </ul>
+        <td>{{ this.num }}</td>
+        <td>{{ this.question }}</td>
+        <td> {{ this.option1 }}</td>
+        <td> {{ this.option2 }}</td>
+        <td> {{ this.option3 }}</td>
+        <td> {{ this.option4}} </td>
+        <td> {{ this.optionCorrect }}</td>
+        <td> {{this.category}}</td>
+        <td>{{this.level }}</td>
 
-        {{/each}}
-        <br/>
-        <br/>
-      </div>
-  </div>
+      </tr>
+
+      {{/each}}
+      <tr>
+    </tbody>
+  </table>
 </div>
 
 <table border='0' cellpadding='0' cellspacing='0' width='700px' align='center'>
