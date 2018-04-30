@@ -23,7 +23,7 @@ var adminDataSchema = new Schema({
     option2: { type: String },
     option3: { type: String },
     option4: { type: String },
-<<<<<<< HEAD
+
     category: { type:String},
     html: { type: String },
     css: { type:String },
@@ -33,8 +33,6 @@ var adminDataSchema = new Schema({
     begineer : { type:String},
     intermediate : {type: String},
     advanced : {type: String},
-=======
->>>>>>> origin/master
     optionCorrect: { type: String, }
 });
 
@@ -246,11 +244,11 @@ router.post('/save', function (req, res, next) {
         option2: req.body.option2,
         option3: req.body.option3,
         option4: req.body.option4,
-<<<<<<< HEAD
+
         category: req.body.category,
         level : req.body.level,
-=======
->>>>>>> origin/master
+
+
         optionCorrect: req.body.optionCorrect
     };
 
@@ -433,11 +431,8 @@ router.post('/update', function (req, res) {
         doc.option2 = req.body.op2;
         doc.option3 = req.body.op3;
         doc.option4 = req.body.op4;
-<<<<<<< HEAD
         doc.category = req.body.category;
         doc.level = req.body.level;
-=======
->>>>>>> origin/master
         doc.optionCorrect = req.body.op;
         doc.save();
 
