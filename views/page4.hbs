@@ -1,3 +1,5 @@
+
+
 <div class="logo">
     <img src="/logo" />
 </div>
@@ -76,6 +78,7 @@
     }
 </style>
 
+
 <script>
     function startTimer(duration, display) {
         var timer = duration, minutes, seconds;
@@ -111,6 +114,53 @@
         window.location.href = '/submit';
     };
 </script>
+
+<div>
+    <h1>
+        <span id="time">01:00</span> minutes!
+    </h1>
+</div>
+
+<div class="container" style="margin-top:200px">
+    <div class="well" style="background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);">
+
+        <form name="myForm" id="myForm" method='post' action='/submit'>
+            <div>
+                <section>
+                    <article class="item">
+                        <div>
+                            <b>{{item.num}}</b>. {{ item.question }}?
+                            <br></br>
+                            <br></br>
+                        </div>
+                        <div class="well" style="background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);">
+                            <div>
+                                <input type="radio" name="option" value="1 " required> {{ item.option1 }}
+                                <br></br>
+                            </div>
+                            <div>
+                                <input type="radio" name="option" value="2 " required> {{ item.option2 }}
+                                <br></br>
+                            </div>
+                            <div>
+                                <input type="radio" name="option" value="3 " required> {{ item.option3 }}
+                                <br></br>
+                            </div>
+                            <div>
+                                <input type="radio" name="option" value="4" required> {{ item.option4 }}
+                                <br></br>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </div>
+            <div style="text-align:center">
+                <button type="submit" class="btn btn-primary">Next Question</button>
+            </div>
+        </form>
+    </div>
+</div>
+
 
 <body>
     <div>
@@ -159,3 +209,4 @@
         </div>
     </div>
 </body>
+
