@@ -109,6 +109,7 @@
 </style>
 
 <script>
+
   function showAlert(error) {
     if (error.responseText == 'showAlert')
       alert("Please enter correct user name and password.")
@@ -141,7 +142,6 @@
       message.innerHTML = "Passwords Do Not Match!"
     }
   }
-
 </script>
 
 <body>
@@ -163,6 +163,9 @@
       <div class="signup-w3ls">
         <div class="signup-agile1">
           <div class="row">
+
+            <!-- To Register -->
+
             <div class="col-sm-4">
               <div class="well" style="background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);">
                 <div class="well" style="background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);">
@@ -223,6 +226,8 @@
             </div>
 
 
+            <!-- user login -->
+
             <div class="col-sm-4">
               <div class="well" style="background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);">
                 <div class="well" style="background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);">
@@ -235,6 +240,7 @@
                     </center>
                   </h6>
                 </div>
+                
                 <form action="/login" method="post">
                   <table border='0' width='700px' cellpadding='0' cellspacing='0' align='center'>
                     <label for="emailid" class="header">E-mail ID</label>
@@ -271,6 +277,8 @@
                 </section>
               </div>
             </div>
+
+            <!-- Admin login -->
 
             <div class="col-sm-4">
               <div class="well" style="background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);">

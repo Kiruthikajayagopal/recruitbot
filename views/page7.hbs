@@ -1,64 +1,124 @@
-<div style="text-align:left" class="container">
+<div style="text-align:center" class="container">
   <h3 style="color:green">Data you entered</h3>
-  <div>
-    <ul class="list-group">
-      <div>
-        {{# each items }}
-        <ul class="list-group">
-          <div class="well">
 
+  <hr>
+  <br>
+  </br>
 
-            <li class="list-group-item">Question no.
-              <b>{{ this.num }}</b>
-            </li>
-            <li class="list-group-item">Question: {{ this.question }}</li>
-            <li class="list-group-item">1: {{ this.option1 }}</li>
-            <li class="list-group-item">2: {{ this.option2 }}</li>
-            <li class="list-group-item">3: {{ this.option3 }}</li>
-            <li class="list-group-item">4: {{ this.option4}} </li>
-            <li class="list-group-item">Correct Answer: {{ this.optionCorrect }}</li>
+  <table class="questions">
+    <thead>
+      <tr>
+        <th>
+          <b>NUMBER</b>
+        </th>
+        <th class="w">
+          <b>QUESTION</b>
+        </th>
+        <th>
+          <b>OPTION 1</b>
+        </th>
+        <th>
+          <b>OPTION 2</b>
+        </th>
+        <th>
+          <b>OPTION 3</b>
+        </th>
+        <th>
+          <b>OPTION 4</b>
+        </th>
+        <th>
+          <b>CORRECT OPTION</b>
+        </th>
+        <th>
+          <b>CATEGORY</b>
+        </th>
+        <th>
+          <b>LEVEL</b>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{# each items }}
+      <tr>
 
-          </div>
-        </ul>
+        <td>{{ this.num }}</td>
+        <td>{{ this.question }}</td>
+        <td> {{ this.option1 }}</td>
+        <td> {{ this.option2 }}</td>
+        <td> {{ this.option3 }}</td>
+        <td> {{ this.option4}} </td>
+        <td> {{ this.optionCorrect }}</td>
+        <td> {{this.category}}</td>
+        <td>{{this.level }}</td>
 
-        {{/each}}
-        <br/>
-        <br/>
-      </div>
+      </tr>
+
+      {{/each}}
+      <tr>
+    </tbody>
+  </table>
   </div>
-</div>
+  
+  <br>
+  <input type="button" onclick="history.back(-1)" class="back" name='back' value="BACK">
+  <br>
+  </br>
+  <br>
+  </br>
 
-<table border='0' cellpadding='0' cellspacing='0' width='700px' align='center'>
-  <tr>
-    <td align='center'>
-      <input type="button" onclick="history.back(-1)" class="back" name='back' value="BACK">
-      <br>
-      </br>
-      <br>
-      </br>
-    </td>
-  </tr>
-</table>
-<style>
-  .back {
-    background-image: url(../images/arrow.png);
-    background-repeat: no-repeat;
-    background-position: 300px;
-    width: 200px;
-    padding: 12px;
-    margin-top: 8px;
-    font-family: "Comic Sans MS", "Comic Sans";
-    cursor: pointer;
-    line-height: 1;
-    border-radius: 5px;
-    font-size: 20px;
-    -webkit-appearance: none;
-    box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.4);
-    outline: none
-  }
 
-  .back:hover {
-    background-color: #36b051;
-    color: #fff;
-  }
-</style>
+  <style>
+    body {
+      padding: 16px;
+      text-align: center;
+    }
+
+    .questions {
+      width: 100%;
+      margin: 20px auto;
+      table-layout: auto;
+    }
+
+    .fixed {
+      table-layout: fixed;
+    }
+
+    table,
+    td,
+    th {
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      border: solid orange 2px ;
+      text-align: center;
+    }
+
+    .w {
+      width: 350px;
+    }
+
+    .back {
+      background-image: url(../images/arrow.png);
+      background-repeat: no-repeat;
+      background-position: 300px;
+      width: 200px;
+      padding: 12px;
+      margin-top: 8px;
+      font-family: "Comic Sans MS", "Comic Sans";
+      cursor: pointer;
+      line-height: 1;
+      border-radius: 5px;
+      font-size: 20px;
+      -webkit-appearance: none;
+      box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.4);
+      outline: none
+    }
+
+    .back:hover {
+      background-color: #36b051;
+      color: #fff;
+    }
+  </style>

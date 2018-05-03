@@ -1,10 +1,13 @@
 <div class="container" style="text-align:center">
   <a href="/deleteName">Delete all registered people from database.</a>
   <h2 style="color:green">People registered</h2>
-  <table class="table table-bordered">
+  <hr>
+  <br>
+  </br>
+   <table class="users">
     <thead>
       <tr>
-        <th>
+        <th class="w">
           <b>E-mail ID</b>
         </th>
         <th>
@@ -31,19 +34,49 @@
     </tbody>
   </table>
 </div>
+<br>
+</br>
 
-<table border='0' cellpadding='0' cellspacing='0' width='700px' align='center'>
-  <tr>
-    <td align='center'>
       <input type="button" onclick="history.back(-1)" class="back" name='back' value="BACK">
       <br>
       </br>
       <br>
       </br>
-    </td>
-  </tr>
-</table>
+    
 <style>
+
+  body {
+      padding: 16px;
+      text-align: center;
+    }
+
+    .users {
+      width: 100%;
+      margin: 20px auto;
+      table-layout: auto;
+    }
+
+    .fixed {
+      table-layout: fixed;
+    }
+
+    table,
+    td,
+    th {
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      border: solid orange 2px ;
+      text-align: center;
+    }
+
+    .w {
+      width: 350px;
+    }
+
   .back {
     background-image: url(../images/arrow.png);
     background-repeat: no-repeat;
